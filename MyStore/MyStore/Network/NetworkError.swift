@@ -47,3 +47,16 @@ enum HTTPStatusCode: Int {
     case internalServerError = 500
     case unknown
 }
+
+public protocol Endpoint {
+  var path: String { get }
+  var method: HTTPMethod { get }
+  var parameters: [String: Any]? { get }
+}
+
+public enum HTTPMethod: String {
+  case get = "GET"
+  case post = "POST"
+  case put = "PUT"
+  case delete = "DELETE"
+}

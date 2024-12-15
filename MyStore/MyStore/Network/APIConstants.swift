@@ -9,4 +9,5 @@ import Foundation
 
 enum APIConstants {
     static let host = "fakestoreapi.com"
+    static let token = ""
 }
